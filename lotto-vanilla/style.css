@@ -1,0 +1,158 @@
+/* common */
+input[type='number'] {
+  height: 30px;
+}
+
+input::-webkit-inner-spin-button {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+/* main */
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+main #title {
+  text-align: center;
+}
+
+/* amount-section */
+#amount-section {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+#amount-section input{
+  width: 84%;
+}
+
+#amount-section button {
+  background-color: rgba(26, 96, 96, 0.534);
+  border-width: 0px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* ticket-section */
+#ticket-section {
+  display: none;
+  margin: 20px 0;
+}
+
+#ticket-section .ticket-buy {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#ticket-section .ticket-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ticket-list .ticket-items .ticket-items__icon {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.ticket-list .ticket-items .ticket-items__number {
+  display: none;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* lotto_input_section */
+#lotto_input_section {
+  display: none;
+}
+
+#lotto_input_section .lotto_input_desc {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#lotto_input_section .input-lotto {
+  display: flex;
+  justify-content: space-between;
+}
+
+#lotto_input_section .input-lotto span {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+#lotto_input_section .input-lotto input {
+  width: 30px;
+  height: 30px;
+}
+
+#lotto_input_section .input-lotto .input_lotto_number,
+#lotto_input_section .input-lotto .input_lotto_bonus_number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#lotto_input_section .lotto_result_btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+#lotto_input_section button {
+  background-color: rgba(26, 96, 96, 0.534);
+  border-width: 0px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* modal */
+#modal {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  bottom: 10%;
+  left: 10%;
+  display: none;
+  padding: 10px;
+  border: 3px solid;
+  border-radius: 10px;
+  background-color: aliceblue;
+}
+
+#modal .close-modal {
+  display: flex;
+  justify-content: end;
+}
+
+#modal h2 {
+  text-align: center;
+}
+
+#modal table {
+  margin: auto;
+  text-align: center;
+}
+
+#modal .rate-of-return {
+  display: block;
+  margin: 10px 0;
+  text-align: center;
+}
+
+#modal .reset-btn {
+  background-color: rgba(26, 96, 96, 0.534);
+  border-width: 0px;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}

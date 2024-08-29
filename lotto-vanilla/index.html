@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lotto Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1 id="title">🎱 행운의 로또</h1>
+      <section id="amount-section">
+        <label for="amount_input">구입할 금액을 입력해주세요.</label>
+        <div class="amount">
+          <input
+            id="amount_input"
+            type="number"
+            placeholder="구입 금액"
+            min="1000"
+            max="100000"
+            required
+            width="100%"
+          />
+          <button id="amount_btn" type="submit">확인</button>
+        </div>
+      </section>
+      <section id="ticket-section">
+        <div class="ticket-buy">
+          <div>
+            <span class="ticket-buy__number">총 n개를 구매했습니다.</span>
+          </div>
+          <div>
+            <label for="look_number">번호 보기</label>
+            <input id="look_number" type="checkbox" />
+          </div>
+        </div>
+        <div class="ticket-list"></div>
+      </section>
+      <section id="lotto_input_section">
+        <span class="lotto_input_desc">지난 주 당첨번호 6개와 보너스 넘버 1개를 입력해주세요.</span>
+        <div class="input-lotto">
+          <div class="input_lotto_number">
+            <span>당첨 번호</span>
+            <div>
+              <input class="my-lotto" type="number" min="1" max="45">
+              <input class="my-lotto" type="number" min="1" max="45">
+              <input class="my-lotto" type="number" min="1" max="45">
+              <input class="my-lotto" type="number" min="1" max="45">
+              <input class="my-lotto" type="number" min="1" max="45">
+              <input class="my-lotto" type="number" min="1" max="45">
+            </div>
+          </div>
+          <div class="input_lotto_bonus_number">
+            <span>보너스 번호</span>
+            <input class="my-lotto" type="number" min="1" max="45">
+          </div>
+        </div>
+        <button class="lotto_result_btn">결과 확인하기</button>
+      </section>
+      <section id="modal">
+        <div class="close-modal">
+          <button class="close-modal-btn">x</button>
+        </div>
+        <h2>🏆 당첨 통계 🏆</h2>
+        <div class="result-info" ></div>
+        <div class="reset">
+          <button class="reset-btn">다시 시작하기</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
