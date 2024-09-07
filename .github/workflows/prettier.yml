@@ -1,0 +1,32 @@
+name: Prettier Check
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Prettier
+        run: npx prettier --check "**/*.{js,ts,jsx,tsx,json,md,css,scss,html}"
+
+      - name: Prettier Formatting
+        if: failure() # if Prettier check fails, try to fix the code
+        run: npx prettier --write "**/*.{js,ts,jsx,tsx,json,md,css,scss,html}"
