@@ -13,16 +13,6 @@ const generateLotto = () => {
   return lotto;
 };
 
-// const createLottoList = (count) => {
-//   Array.from({ length: count }, () => {
-//     const lotto = _generateLotto();
-
-//     this.#lotto = lotto.lotto;
-
-//     return lotto.lotto;
-//   });
-// }
-
 const shallowEqual = (objA, objB) => {
   if (Object.is(objA, objB)) {
     return true;

@@ -31,8 +31,6 @@ export default function App(app) {
         const lottoShopTicket = lottoShop.ticket
         const lottoShopLottoList = lottoShop.lottoList
 
-        console.log(lottoShop)
-
         this.setState({
           coin: lottoShopCoin,
           ticket: lottoShopTicket,
@@ -123,8 +121,6 @@ export default function App(app) {
     lottoResult.setState({
       myLotto: this.state.myLotto,
     });
-
-    console.log(this.state)
   };
 
   const init = () => {
