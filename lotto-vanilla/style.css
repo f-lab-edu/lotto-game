@@ -1,6 +1,15 @@
 /* common */
-input[type='number'] {
-  height: 30px;
+:root {
+  --component-gap: 30px;
+  --primary-color: indianred;
+}
+
+button {
+  height: 36px;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  color: white;
 }
 
 input::-webkit-inner-spin-button {
@@ -9,150 +18,177 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-/* main */
-main {
-  position: relative;
+/* App */
+
+#app {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   width: 100%;
   max-width: 400px;
-  margin: 0 auto;
 }
 
-main #title {
+/* Heaader */
+header {
+  width: 100%;
   text-align: center;
+  margin-bottom: var(--component-gap);
 }
 
-/* amount-section */
-#amount-section {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0;
+/* CoinInput */
+#coin-input-component {
+  width: 100%;
+  margin-bottom: var(--component-gap);
 }
 
-#amount-section input{
-  width: 84%;
-}
-
-#amount-section button {
-  background-color: rgba(26, 96, 96, 0.534);
-  border-width: 0px;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-/* ticket-section */
-#ticket-section {
-  display: none;
-  margin: 20px 0;
-}
-
-#ticket-section .ticket-buy {
+#coin-input-component .coin-input-box {
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
+}
+
+#coin-input-component .coin-input-box input {
+  margin-right: 10px;
+  padding: 0 10px;
   width: 100%;
 }
 
-#ticket-section .ticket-list {
+#coin-input-component .coin-input-box button {
+  width: 64px;
+}
+
+/* LottoList */
+#lotto-list-component {
+  width: 100%;
+  margin-bottom: var(--component-gap);
+}
+
+#lotto-list-component .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#lotto-list-component .detail {
   display: flex;
   flex-wrap: wrap;
 }
 
-.ticket-list .ticket-items .ticket-items__icon {
-  font-size: 30px;
-  margin-right: 10px;
-}
-
-.ticket-list .ticket-items .ticket-items__number {
-  display: none;
-  margin-right: 10px;
-  font-size: 20px;
-}
-
-/* lotto_input_section */
-#lotto_input_section {
-  display: none;
-}
-
-#lotto_input_section .lotto_input_desc {
+#lotto-list-component .detail.show {
   display: block;
-  margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 
-#lotto_input_section .input-lotto {
+#lotto-list-component .detail .items {
   display: flex;
-  justify-content: space-between;
-}
-
-#lotto_input_section .input-lotto span {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: 900;
-}
-
-#lotto_input_section .input-lotto input {
-  width: 30px;
-  height: 30px;
-}
-
-#lotto_input_section .input-lotto .input_lotto_number,
-#lotto_input_section .input-lotto .input_lotto_bonus_number {
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-#lotto_input_section .lotto_result_btn {
-  width: 100%;
-  margin-top: 10px;
+#lotto-list-component .detail .items .item__icon {
+  margin-right: 5px;
+  font-size: 35px;
 }
 
-#lotto_input_section button {
-  background-color: rgba(26, 96, 96, 0.534);
-  border-width: 0px;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-/* modal */
-#modal {
-  position: absolute;
-  top: 10%;
-  right: 10%;
-  bottom: 10%;
-  left: 10%;
+#lotto-list-component .detail .items .item__number {
   display: none;
-  padding: 10px;
-  border: 3px solid;
-  border-radius: 10px;
-  background-color: aliceblue;
 }
 
-#modal .close-modal {
-  display: flex;
-  justify-content: end;
+#lotto-list-component .detail .items .item__number.show {
+  display: inline;
+  font-size: 17px;
 }
 
-#modal h2 {
-  text-align: center;
-}
-
-#modal table {
-  margin: auto;
-  text-align: center;
-}
-
-#modal .rate-of-return {
-  display: block;
-  margin: 10px 0;
-  text-align: center;
-}
-
-#modal .reset-btn {
-  background-color: rgba(26, 96, 96, 0.534);
-  border-width: 0px;
-  border-radius: 5px;
-  padding: 10px;
+/* LottoInput */
+#lotto-input-component {
   width: 100%;
+  margin-bottom: var(--component-gap);
+}
+
+#lotto-input-component .lotto-input-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+#lotto-input-component .lotto-input-box span {
+  font-weight: 900;
+}
+
+#lotto-input-component .lotto-input-box input {
+  width: 30px;
+  height: 35px;
+  text-align: center;
+}
+
+#lotto-input-component .lotto-input-box .input-set {
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#lotto-input-component button {
+  width: 100%;
+}
+
+/* LottoResult */
+#lotto-result-component {
+  width: 100%;
+}
+
+#lotto-result-component.open {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(1, 1, 1, 0.5);
+  transition: 0.5s;
+}
+
+#lotto-result-component .result-body {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+#lotto-result-component .result-body .close-modal {
+  text-align: end;
+}
+
+#lotto-result-component .result-body .close-modal button {
+  width: 22px;
+  height: 22px;
+}
+
+#lotto-result-component .result-body h2 {
+  text-align: center;
+}
+
+#lotto-result-component .result-body .detail table {
+  text-align: center;
+}
+
+#lotto-result-component .result-body .detail td {
+  padding: 10px 0;
+}
+
+#lotto-result-component .result-body .detail .rate-of-return {
+  display: inline-block;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 900;
+}
+
+#lotto-result-component .result-body .reset {
+  text-align: center;
 }
